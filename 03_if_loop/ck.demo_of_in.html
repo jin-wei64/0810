@@ -8,7 +8,9 @@
     <script>
         var dataList = [10, 20, 30];
         dataList[4] = 40;
-        
+        for(var data of dataList) {
+            alert(data) ;
+        }
         // var total = 0;
         // for (let i = 0; i < dataList.length; i++) {
         //     if (typeof dataList[i] === "undefined") {
@@ -30,7 +32,7 @@
         
         var total = 0;
         for (let data of dataList) {
-            if (typeof data === "undefined") {
+            if (typeof data === "undefined") { //三個等於為型態相等
                 continue;
             }
             total += data;

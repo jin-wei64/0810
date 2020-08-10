@@ -22,7 +22,7 @@
 
     <h1>JavaScript 語法練習</h1>
     <ul id="latestNews" class="list-group">
-        <li class="list-group-item">幾乎是一樣的程式，請問 B 那段程式的語法有何錯誤?</li>
+        <li class="list-group-item">0.1 + 0.2 = ?</li>
     </ul>
 
     <button type="button" 
@@ -41,25 +41,15 @@
 
 $(document).ready(function () {
     $("#okButton").on('click', function () {
-        // ----- A 段落 -----
-        var x1 = 100;
-        var x1 = 200;
-        report.innerHTML = `
-            x1 = ${x1}<br>
-            y1 = ${y1}<br>
-        `;
-        var y1 = 200;
+        var x = 0.1;
+        var y = 0.2;
+        z = x + y;
+        report.innerHTML += `z = ${z} <br>`;
 
-        // ----- B 段落 -----
-        let x2 = 100;
-        let x2 = 200;  // <----- 
-        report.innerHTML += `
-            x2 = ${x2}<br>
-            y2 = ${y2}<br>
-        `;
-        let y2 = 200; // <-----
-
-        report.innerHTML += "-- End -- ";
+        var x = 0.1;
+        var y = 0.2;
+        z = ( x * 10000 + y * 10000 ) / 10000;
+        report.innerHTML += `z = ${z} <br>`
     })
 
 })
