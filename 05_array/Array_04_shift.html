@@ -29,6 +29,10 @@ test.onclick = function () {
     data.pop();
 
     // 你的任務程式...
+    for(var i = 0;i<data.length;i++){
+        data[i] = data[i+1];
+    }
+    data.pop();
 
 
     report.innerText = data.toString();

@@ -21,7 +21,7 @@ test.onclick = function () {
     // 請寫程式，添加數字 3 到陣列的開頭處
 
     var data = [3, 0, 1, 8, 7, 2, 5, 4, 9, 6];
-
+    
     data[data.length] = 10;
     // 或者:
     // data.push(10)
@@ -31,6 +31,12 @@ test.onclick = function () {
     data.shift();
 
     // 你的任務程式...
+    data.push(3);
+    for(var i = 0 ; i < data.length ; i++ ){
+        var temp = data[data.length-1];
+        data[data.length-1] = data[i];
+        data[i] = temp; 
+    }
 
     report.innerText = data.toString();
 

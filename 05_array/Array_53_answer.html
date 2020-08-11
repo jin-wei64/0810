@@ -28,13 +28,13 @@ test.onclick = function () {
     data.sort(function (x, y) {
         console.log(x, y);
         if (x == 2)
-            return 1
+            return 1 ;  
         else if (y == 2)
-            return -1
+            return -1 ;
         else
-            return x - y;
+            return x - y ;
     });
-
+    //參考資料https://medium.com/@realdennis/javascript-%E5%BE%9Earray%E7%9A%84sort%E6%96%B9%E6%B3%95-%E8%81%8A%E5%88%B0%E5%90%84%E5%AE%B6%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9A%84%E5%AF%A6%E4%BD%9C%E7%AE%97%E6%B3%95-c23a335b1b80
     
     report.innerText = data.toString();
 
