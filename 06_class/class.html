@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="debug"></div>
+    <script>
+
+        class animal{
+            constructor(weightValue){ //固定名稱 建構子
+                if(weightValue == null)
+                this.weight = 2 ;
+                else
+                this._weight = weightValue ;
+            }
+            get weight(){
+                return this._weight ;
+            }
+            set weight(Value){
+                if (Value > 0)
+                    this._weight = Value ;
+            } 
+            makeshound(){
+                alert("Animal.....") ;
+            }
+        }
+
+        class Dog extends animal{
+            constructor(a,local){
+                super(a);
+                this.local = local; 
+            }
+            makeshound(){
+                super.makeshound();
+                alert("wnog wnog");
+            }
+        }
+        let obj = new Dog(3,"sws");
+        // obj.weight = 100 ;
+        alert(obj.weight );
+
+        alert(obj.local);
+        //obj.makeshound();
+
+    </script>
+    
+</body>
+</html>

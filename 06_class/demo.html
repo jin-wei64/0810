@@ -11,7 +11,59 @@
     <div id="debug"></div>
 
     <script>
+        // var obj = new Object() ;
+        // var obj = {
+        //     //firstname : "wolfgang"
+        //     // sayHello : function(){
+        //     //     debug.innerHTML += `Hello! ${this.lastname} <br>` ;
+        //     // }
+        //     Array : [
+		//         { firstName:"Derek", lastName:"Jeter" }, 
+		//         { firstName:"Jeremy", lastName:"Lin" }, 
+        //         { firstName:"Lionel", lastName:"Messi" }    
+	    //     ]
+        // } ;
+        //object array
+        // var objArray = [
+		// {"firstName":"Derek", "lastName":"Jeter"}, 
+		// {"firstName":"Jeremy", "lastName":"Lin"}, 
+		// {"firstName":"Lionel", "lastName":"Messi"}
+	    // ];
+        // debug.innerText = JSON.stringify(objArray);
+        //
+        // obj.firstname = "wolfgang" ;
+        // obj.lastname = "Chien" ;
+        // obj.sayHello = function () {
+        //     debug.innerHTML += `Hello! ${this.lastname} <br>` ;
+        // };
+        // obj.sayHello();  
 
+        // debug.innerText = JSON.stringify(obj.Array);
+
+        // //need test    
+        // var s = '[{"firstName":"Derek","lastName":"Jeter"},{"firstName":"Jeremy","lastName":"Lin"},{"firstName":"Lionel","lastName":"Messi"}]';
+	    // var objArray = JSON.parse(s);
+	    // debug.innerHTML = objArray[2].lastName + "<br>";
+
+        
+        
+
+
+        // function +this => object 
+        obj = function() {  // function obj (){}
+            this.firstname = "wolfgang" ;
+            this.lastname = "Chien" ;
+            this.b = function() {
+                debug.innerHTML += this.lastname + `<br>` ;
+            }
+        }
+        var s = new obj();
+        debug.innerHTML = s.firstname + `<br>` ;
+        s.b();
+
+        //
+
+        
 
 
     </script>
