@@ -9,15 +9,18 @@ function longTimeWork(workFine = true, errorMessage = "test") {
 // async function usingLongTimeWork() {
 //     var result = await longTimeWork(true, "test");
 //     console.log(result);
+//     console.log("swqs")
 // }
 
 async function usingLongTimeWork() {
     try {
         var result = await longTimeWork(false, "test");
         console.log(result);
+        
     }
     catch (e) {
         console.log(e);
+        console.log("swwsw");
     }
     
 }

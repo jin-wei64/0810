@@ -1,7 +1,8 @@
 function happy(data, timeCount) {
     return new Promise( function (resolve, reject) {
         setTimeout(function () {
-            resolve(data);
+            if (data == 200)
+            reject(1000);
         }, timeCount)
     })
 }
